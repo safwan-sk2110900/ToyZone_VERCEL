@@ -1,0 +1,72 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Item {
+  id             Int              @id @default(autoincrement())
+  name           String
+  price          Float
+  image          String
+  desc           String
+  seller         String
+  stock          Int
+  type           String
+  discount       Float
+  gender         String
+  paymenthistory Paymenthistory[]
+}
+
+model Customer {
+  name           String
+  surname        String
+  shipping       String
+  username       String           @id
+  password       String
+  balance        Float
+  paymenthistory Paymenthistory[]
+}
+
+model Paymenthistory {
+  pid          Int      @id @default(autoincrement())
+  qty          Int
+  amount       Int
+  customer     Customer @relation(fields: [username], references: [username], onDelete: Cascade, onUpdate: Cascade)
+  username     String
+  item         Item     @relation(fields: [productid], references: [id])
+  productid    Int
+  location     String
+  purchaseDate DateTime
+}
+
+// model Salehistory {
+//   sid      Int    @id @default(autoincrement())
+//   PID      Int
+//   Quantity Int
+//   User     String
+//   Price    Int
+//   item     Item   @relation(fields: [PID], references: [id], onDelete: Cascade, onUpdate: Cascade)
+// }
+
+model Seller {
+  companyName String @unique
+  username    String @id
+  password    String
+  account     Int
+}
+
+model Admin {
+  username String @id
+  password String
+}

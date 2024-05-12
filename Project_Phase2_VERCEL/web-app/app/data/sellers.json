@@ -1,0 +1,19 @@
+[{
+    "companyName":"ToysUltimate",
+    "username":"test123",
+    "password":"pass321",
+    "account":0
+    
+},
+{
+    "companyName":"ToysPro",
+    "username":"testPro123",
+    "password":"pass321",
+    "account":0
+},
+{
+    "companyName":"ToysRUs",
+    "username":"testUs123",
+    "password":"power21",
+    "account":0
+}]

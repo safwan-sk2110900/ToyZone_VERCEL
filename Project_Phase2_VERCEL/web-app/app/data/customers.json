@@ -1,0 +1,44 @@
+[{
+    "name":"Ahmed",
+    "surname":"Jassim",
+    "shipping":"123 street, Rayyan",
+    "username":"ak2143",
+    "password":"pass321",
+    "balance":50000.0
+
+},
+{
+    "name":"Samir",
+    "surname":"Jaffer",
+    "shipping":"123 street, Doha",
+    "username":"sk2173",
+    "password":"pass321",
+    "balance":15000.0
+  
+},
+{
+    "name":"Rick",
+    "surname":"Joseph",
+    "shipping":"1234 street, Adelaide",
+    "username":"rem2143",
+    "password":"pass321",
+    "balance":25000.0
+
+},{
+    "name":"Fayiz",
+    "surname":"Khan",
+    "shipping":"1234 street, Shamal",
+    "username":"fyz3343",
+    "password":"pass321",
+    "balance":55000.0
+
+},
+{
+    "name":"Maazin",
+    "surname":"Mz",
+    "shipping":"1234 street, Barwa City",
+    "username":"maz1221",
+    "password":"pass321",
+    "balance":100000.0
+
+}]
