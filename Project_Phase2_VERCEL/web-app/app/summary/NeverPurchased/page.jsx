@@ -7,3 +7,10 @@ export default async function page() {
     <Never items={nvrItems}></Never>
   )
 }
+
+
+export async function POST(request){
+  const item=await request.json();
+ 
+  return Response.json(item,{status: 200})
+}
