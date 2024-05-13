@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import styles from '../../page.module.css';
-export default async function Home() {
+export default function Home() {
   
   const [products, setProducts] = useState([]);
   const [items, setItems] = useState([]);
